@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEMILANG V SMANIVDA 2026</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background-color: #0b0c10; color: #ffffff; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+    .container { background: linear-gradient(180deg, #101426 0%, #0a0c16 100%); border: 1px solid #1f2833; border-radius: 24px; padding: 30px 20px; width: 100%; max-width: 420px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-align: center; }
+    h1.main-title { font-size: 24px; font-weight: 800; background: linear-gradient(90deg, #4d94ff, #9b51e0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; letter-spacing: 1px; }
+    .subtitle { font-size: 14px; color: #a0a5b5; margin-bottom: 20px; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; background-color: rgba(0, 230, 118, 0.1); border: 1px solid rgba(0, 230, 118, 0.3); color: #00e676; padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 25px; }
+    .badge-dot { width: 8px; height: 8px; background-color: #00e676; border-radius: 50%; }
+    .countdown-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 20px 15px; margin-bottom: 25px; }
+    .countdown-title { font-size: 11px; letter-spacing: 1.5px; color: #8c94a8; font-weight: 700; margin-bottom: 15px; }
+    .timer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    .timer-box { background-color: #121829; border-radius: 10px; padding: 10px 5px; border: 1px solid rgba(255, 255, 255, 0.05); }
+    .timer-value { font-size: 20px; font-weight: bold; color: #9d4edd; }
+    .timer-label { font-size: 9px; color: #6c757d; margin-top: 4px; font-weight: 600; }
+    .menu-container { display: flex; flex-direction: column; gap: 12px; }
+    .btn { width: 100%; padding: 12px; border-radius: 12px; border: none; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.2s ease; text-decoration: none; display: inline-block; box-sizing: border-box; }
+    .btn-primary { background: linear-gradient(90deg, #3a86ff, #8338ec); color: #ffffff; box-shadow: 0 4px 15px rgba(114, 9, 183, 0.3); }
+    .btn-secondary { background: rgba(255, 255, 255, 0.05); color: #e0e0e0; border: 1px solid rgba(255, 255, 255, 0.1); }
+    .view-section { display: block; }
+    .hidden { display: none !important; }
+    .page-box { padding: 20px 10px; }
+    .page-title { font-size: 24px; font-weight: 800; color: #ffbe0b; margin-bottom: 10px; letter-spacing: 1px; }
+    .page-desc { color: #a0a5b5; font-size: 14px; margin-bottom: 25px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="main-page" class="view-section">
+      <h1 class="main-title">GEMILANG V SMANIVDA 2026</h1>
+      <p class="subtitle">Gebyar Lomba Aksi Penggalang</p>
+      <div class="badge"><span class="badge-dot"></span> Pendaftaran Telah Dibuka</div>
+      <div class="countdown-card">
+        <div class="countdown-title">MENUJU ACARA UTAMA</div>
+        <div class="timer-grid">
+          <div class="timer-box"><div class="timer-value" id="days">74</div><div class="timer-label">HARI</div></div>
+          <div class="timer-box"><div class="timer-value" id="hours">00</div><div class="timer-label">JAM</div></div>
+          <div class="timer-box"><div class="timer-value" id="minutes">00</div><div class="timer-label">MENIT</div></div>
+          <div class="timer-box"><div class="timer-value" id="seconds">00</div><div class="timer-label">DETIK</div></div>
+        </div>
+      </div>
+      <div class="menu-container">
+        <button class="btn btn-secondary" onclick="showPage('pamflet-page')">Pamflet</button>
+        <a class="btn btn-secondary" href="https://www.instagram.com/sivount.smanivda?stkn=MWhsMjE4aXJxZTBwcA=" target="_blank">Juklak dan Juknis</a>
+        <a class="btn btn-primary" href="https://forms.gle/Vv5avFcyfe8jArMc7" target="_blank">Registrasi</a>
+        <button class="btn btn-secondary" onclick="showPage('twibbon-page')">Twibbon</button>
+      </div>
+    </div>
+    <div id="pamflet-page" class="view-section hidden">
+      <div class="page-box">
+        <div class="page-title">COMING SOON</div>
+        <p class="page-desc">Pamflet acara GEMILANG V SMANIVDA 2026 akan segera dipublikasikan.</p>
+        <button class="btn btn-primary" onclick="showPage('main-page')">Back</button>
+      </div>
+    </div>
+    <div id="twibbon-page" class="view-section hidden">
+      <div class="page-box">
+        <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 8px;">PILIH TWIBBON</h2>
+        <p class="page-desc">Silakan pilih kategori Twibbon yang ingin dipakai:</p>
+        <div class="menu-container">
+          <a class="btn btn-primary" href="https://twb.nz/gemilangv2026" target="_blank">Twibbon Peserta</a>
+          <a class="btn btn-secondary" href="https://twb.nz/pangkalangemilangv" target="_blank">Twibbon Pangkalan</a>
+          <button class="btn btn-secondary" onclick="showPage('main-page')" style="margin-top: 10px;">Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const targetDate = new Date().getTime() + (74 * 24 * 60 * 60 * 1000);
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      if (distance > 0) {
+        document.getElementById("days").innerText = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, '0');
+        document.getElementById("hours").innerText = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+        document.getElementById("minutes").innerText = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+        document.getElementById("seconds").innerText = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
+      }
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    function showPage(pageId) {
+      document.getElementById("main-page").classList.add("hidden");
+      document.getElementById("pamflet-page").classList.add("hidden");
+      document.getElementById("twibbon-page").classList.add("hidden");
+      document.getElementById(pageId).classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
